@@ -79,7 +79,7 @@ const useStyles = makeStyles((theme: Theme) =>
 		},
 		nested: {
 			paddingLeft: theme.spacing(4),
-			background: '#22242e'
+			background: '#c8c8c8'
 		},
 		logoArea: {
 			display: 'flex',
@@ -89,7 +89,7 @@ const useStyles = makeStyles((theme: Theme) =>
 			flexGrow: 1,
 		},
 		parent: {
-			background: '#22242e'
+			background: '#c8c8c8'
 		},
 		drawerGridContainer: {
 			height: '100%',

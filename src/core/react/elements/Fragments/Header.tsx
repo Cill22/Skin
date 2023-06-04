@@ -99,9 +99,8 @@ const Header: React.FC<Props> = React.memo(({ isSubPage, isVideoVisible }) => {
 				The MIT License {getArrow()}
 			</Typography>
 		}
-		return <Typography component="h3" variant="h3" color="textPrimary" gutterBottom display="block" className={classes.title}>
-			No brains <span className={classes.proofOfBurn}>more gains</span> {/*getArrow()*/}
-		</Typography>
+		return <Typography component="h3" align="left" variant="h3" color="textPrimary" gutterBottom display="block" className={classes.title}>
+			No brains more gains  </Typography>
 	}
 
 	const getSubHeader = () => {

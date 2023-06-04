@@ -43,16 +43,22 @@ const useStyles = makeStyles(() => ({
 	progressBarLeft: {
 		height: '15px',
 		borderTopLeftRadius: '5px',
-		borderBottomLeftRadius: '5px'
+		borderBottomLeftRadius: '5px',
+		backgroundColor: '#fade02',
+    	borderRadius: `#0xa2b4`
 	},
 	progressBarRight: {
 		height: '15px',
 		borderTopRightRadius: '5px',
-		borderBottomRightRadius: '5px'
+		borderBottomRightRadius: '5px',
+		backgroundColor: '#85bb65',
+    	borderRadius: `#0xa2b4`
 	},
 	formCell: {
 		paddingTop: 0,
 		paddingBottom: 0
+		
+
 	},
 	largeSlider: {
 		'& .MuiSlider-rail': {
@@ -66,7 +72,8 @@ const useStyles = makeStyles(() => ({
 		'& .MuiSlider-thumb': {
 			width: 26,
 			height: 26,
-			border: '2px solid #187a82'
+			border: '2px solid #187a82',
+			color: '#fade02'
 		}
 	},
 	datePicker: {
@@ -89,7 +96,8 @@ const useStyles = makeStyles(() => ({
 		}
 	},
 	topLeftPrices: {
-		color: '#FFF'
+		color: '#000000'
+
 	},
 	topLeftPricesContainer: {
 		[theme.muiTheme.breakpoints.down('sm')]: {
@@ -101,6 +109,7 @@ const useStyles = makeStyles(() => ({
 			flexDirection: 'column'
 		}
 	},
+	
 	topContainer: {
 		[theme.muiTheme.breakpoints.down('xs')]: {
 			flexDirection: 'column'
@@ -1071,7 +1080,7 @@ const Render: React.FC<RenderParams> = React.memo(({ addressLock, balances, sele
 			const actualFluxPrice = `$ ${shortFluxPrice}`;
 
 			return <>
-				<Box display="inline" className={classes.topLeftPrices}>{getIcon(Token.Mintable)} <Typography variant="body2" color="textSecondary" display="inline">{mintableTokenShortName}:</Typography> {actualFluxPrice}</Box>
+				<Box display="inline" className={classes.topLeftPrices}>{getIcon(Token.Mintable)} <Typography variant="body2" color="textPrimary" display="inline">{mintableTokenShortName}:</Typography> {actualFluxPrice}</Box>
 			</>
 		}
 		const getDamPrice = () => {
@@ -1079,7 +1088,7 @@ const Render: React.FC<RenderParams> = React.memo(({ addressLock, balances, sele
 			const actualDamPrice = `$ ${shortDamPrice}`;
 
 			return <>
-				<Box display="inline" className={classes.topLeftPrices}>{getIcon(Token.Lockable)} <Typography variant="body2" color="textSecondary" display="inline">{lockableTokenShortName}:</Typography> {actualDamPrice}</Box>
+				<Box display="inline" className={classes.topLeftPrices}>{getIcon(Token.Lockable)} <Typography variant="body2" color="textPrimary" display="inline">{lockableTokenShortName}:</Typography> {actualDamPrice}</Box>
 			</>
 		}
 		const getEthPrice = () => {
@@ -1087,7 +1096,7 @@ const Render: React.FC<RenderParams> = React.memo(({ addressLock, balances, sele
 			const actualFluxPrice = `$ ${shortFluxPrice}`;
 
 			return <>
-				<Box display="inline" className={classes.topLeftPrices}>{getIcon(Token.ETH)} <Typography variant="body2" color="textSecondary" display="inline">ETH:</Typography> {actualFluxPrice}</Box>
+				<Box display="inline" className={classes.topLeftPrices}>{getIcon(Token.ETH)} <Typography variant="body2" color="textPrimary" display="inline">ETH:</Typography> {actualFluxPrice}</Box>
 			</>
 		}
 		return <>
